@@ -12,3 +12,4 @@ end
 
 # Executes every other recipe if enabled.
 include_recipe "cespi_server_base::ntp" if node.cespi_server_base.ntp.enabled
+include_recipe "cespi_server_base::mirror" if node.cespi_server_base.mirror.enabled
