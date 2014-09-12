@@ -6,3 +6,4 @@ description      'Installs/Configures cespi_server_base'
 long_description 'Installs/Configures cespi_server_base'
 version          '0.1.0'
 
+depends 'ntp'
