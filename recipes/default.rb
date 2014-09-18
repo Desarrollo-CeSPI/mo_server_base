@@ -1,3 +1,5 @@
+include_recipe "apt::default"
+
 # Install base packages.
 node[:cespi_server_base][:packages].each do |p|
   package p
