@@ -7,6 +7,11 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.require_version ">= 1.5.0"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
+
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
@@ -73,10 +78,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.berkshelf.except = []
 
 
-  config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = '../../cookbooks'
-    chef.environments_path = '../../environments'
-    chef.data_bags_path = '../../data_bags'
+  config.vm.provision :chef_client do |chef|
+    chef.chef_server_url = "https://chef.desarrollo.unlp.edu.ar"
+    chef.validation_key_path = "../../../.chef/validator.pem"
+    #chef.cookbooks_path = '../../cookbooks'
+    #chef.environments_path = '../../environments'
+    #chef.data_bags_path = '../../data_bags'
     chef.json = {
       mysql: {
         server_root_password: 'rootpass',

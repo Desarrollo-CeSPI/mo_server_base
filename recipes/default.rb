@@ -10,6 +10,9 @@ execute 'timezone' do
 #  not_if
 end
 
+# Create users.
+include_recipe "cespi_server_base::user"
+
 # Executes every other recipe if enabled.
 include_recipe "cespi_server_base::ntp" if node.cespi_server_base.ntp.enabled
 include_recipe "cespi_server_base::mirror" if node.cespi_server_base.mirror.enabled
