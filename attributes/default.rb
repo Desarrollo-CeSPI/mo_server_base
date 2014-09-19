@@ -11,10 +11,10 @@ default[:cespi_server_base][:ntp][:apparmor_enabled] = true
 
 # Ubuntu mirror configuration.
 default[:cespi_server_base][:mirror][:enabled] = true
-default[:cespi_server_base][:ubuntu][:archive_url] = "http://mirror.unlp.edu.ar/ubuntu/"
-default[:cespi_server_base][:ubuntu][:archive_url_src] = "http://ar.archive.ubuntu.com/ubuntu/"
-default[:cespi_server_base][:ubuntu][:security_url] = "http://mirror.unlp.edu.ar/ubuntu/"
-default[:cespi_server_base][:ubuntu][:security_url_src] = "http://security.ubuntu.com/ubuntu/"
+default[:cespi_server_base][:mirror][:archive_url] = "http://mirror.unlp.edu.ar/ubuntu/"
+default[:cespi_server_base][:mirror][:archive_url_src] = "http://ar.archive.ubuntu.com/ubuntu/"
+default[:cespi_server_base][:mirror][:security_url] = "http://mirror.unlp.edu.ar/ubuntu/"
+default[:cespi_server_base][:mirror][:security_url_src] = "http://security.ubuntu.com/ubuntu/"
 
 # Sudoers configuration.
 default['authorization']['sudo']['passwordless'] = true

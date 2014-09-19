@@ -6,7 +6,7 @@ description      'Installs/Configures cespi_server_base'
 long_description 'Installs/Configures cespi_server_base'
 version          '0.1.8'
 
-depends 'apt'
+depends 'apt', '=2.6.0'
 depends 'ntp', '=1.6.4'
 depends 'ubuntu', '=1.0.4'
 depends 'sudo', '=2.7.1'
