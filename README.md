@@ -1,7 +1,8 @@
-# cespi_server_base-cookbook
+# Cookbook: cespi_server_base
 
 Configures some basic stuff we usually need on a server. So far, what is
 implemented is:
+
 * Configures custom Debian/Ubuntu mirrors.
 * Creates some initial groups.
 * Creates users based on information taken from a databag.
@@ -99,6 +100,7 @@ enabled attributes.
 ## ToDo
 
 Planned but still not implemented.
+
 * Backup client.
 * Log client.
 * Monitoring client.
