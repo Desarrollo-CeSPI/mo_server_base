@@ -16,5 +16,8 @@ default[:cespi_server_base][:mirror][:archive_url_src] = "http://ar.archive.ubun
 default[:cespi_server_base][:mirror][:security_url] = "http://mirror.unlp.edu.ar/ubuntu/"
 default[:cespi_server_base][:mirror][:security_url_src] = "http://security.ubuntu.com/ubuntu/"
 
+# Users configuration.
+default[:cespi_server_base][:authorization][:superadmin_group] = "sysadmin"
+
 # Sudoers configuration.
-default['authorization']['sudo']['passwordless'] = true
+default[:cespi_server_base][:authorization][:sudo][:passwordless] = true
