@@ -21,3 +21,7 @@ default[:cespi_server_base][:authorization][:superadmin_group] = "sysadmin"
 
 # Sudoers configuration.
 default[:cespi_server_base][:authorization][:sudo][:passwordless] = true
+
+# Rsyslog configuration.
+default[:cespi_server_base][:rsyslog][:enabled] = true
+default[:cespi_server_base][:rsyslog][:repeated_msg_reduction] = "off"

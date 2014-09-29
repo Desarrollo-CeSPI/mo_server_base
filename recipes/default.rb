@@ -18,3 +18,4 @@ include_recipe "cespi_server_base::user"
 # Executes every other recipe if enabled.
 include_recipe "cespi_server_base::ntp" if node.cespi_server_base.ntp.enabled
 include_recipe "cespi_server_base::mirror" if node.cespi_server_base.mirror.enabled
+include_recipe "cespi_server_base::rsyslog" if node.cespi_server_base.rsyslog.repeated_msg_reduction

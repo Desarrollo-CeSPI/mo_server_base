@@ -81,7 +81,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_client do |chef|
     chef.chef_server_url = "https://chef.desarrollo.unlp.edu.ar"
     chef.validation_key_path = "../../../.chef/validator.pem"
-    #chef.cookbooks_path = '../../cookbooks'
+    #chef.cookbooks_path = '../'
     #chef.environments_path = '../../environments'
     #chef.data_bags_path = '../../data_bags'
     chef.json = {
@@ -94,6 +94,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     chef.run_list = [
         "recipe[cespi_server_base::default]"
+#        "recipe[cespi_server_security::default]"
     ]
   end
 end
