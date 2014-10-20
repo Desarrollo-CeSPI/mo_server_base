@@ -7,7 +7,7 @@ default[:cespi_server_base][:timezone] = "America/Argentina/Buenos_Aires"
 # NTP specific
 default[:cespi_server_base][:ntp][:enabled] = true
 default[:cespi_server_base][:ntp][:servers] = %w(ntp.desarrollo.unlp.edu.ar)
-default[:cespi_server_base][:ntp][:apparmor_enabled] = true
+default[:cespi_server_base][:ntp][:apparmor_enabled] = false
 
 # Ubuntu mirror configuration.
 default[:cespi_server_base][:mirror][:enabled] = true
