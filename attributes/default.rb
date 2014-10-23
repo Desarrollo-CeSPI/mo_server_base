@@ -1,5 +1,5 @@
 # General parameters
-default[:cespi_server_base][:packages] = %w(atsar vim locate)
+default[:cespi_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils)
 
 # Timezone configuration.
 default[:cespi_server_base][:timezone] = "America/Argentina/Buenos_Aires"
