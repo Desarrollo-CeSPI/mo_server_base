@@ -13,82 +13,43 @@ Configures some basic stuff we usually need on a server. So far, what is impleme
 
 Tested on Ubuntu 14.04, should work on Ubuntu 12.04 and Debian.
 
+## Recipes
+
+### cespi_server_base::default
+
+This recipe invokes every other recipe enabled in the attributes.
+
+### cespi_server_base::mirror
+
+Changes the default mirrors to the ones specified in the corresponding attributes. By default, it's set to use CeSPI mirrors.
+
+### cespi_server_base::ntp
+
+Installs and configures NTP client as specified in the attributes.
+
+### cespi_server_base::rsyslog
+
+This recipe is a wrapper for the Rsyslog recipe to just change the way logs are stored in syslog, saving them line by line instead of consolidating some logs on the same line. The reason is to enable the use of some applications like Fail2Ban.
+
+### cespi_server_base::user
+
+* Creates two groups:
+  * sysadmin group (specified in the attributes). Users added to this group will be sudoers.
+  * devops.
+* Creates users.
+  * From databag 'users'.
+  * Copies SSH public key.
+  * Adds users to the specified groups.
+
 ## Attributes
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:packages]</tt></td>
-    <td>Array</td>
-    <td>list of package names to install when run</td>
-    <td><tt>%w(atsar vim locate)</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:timezone]</tt></td>
-    <td>String</td>
-    <td>set timezone to use on the server</td>
-    <td><tt>"America/Argentina/Buenos_Aires"</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:ntp][:enabled]</tt></td>
-    <td>Boolean</td>
-    <td>sets whether or not to enable NTP client</td>
-    <td><tt>true</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:ntp][:servers]</tt></td>
-    <td>Array</td>
-    <td>list of servers to use to synchronize clock via NTP</td>
-    <td><tt>%w(ntp.desarrollo.unlp.edu.ar)</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:ntp][:apparmor_enabled]</tt></td>
-    <td>Boolean</td>
-    <td>if true configures some stuff to work with apparmor</td>
-    <td><tt>true</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:mirror][:enabled]</tt></td>
-    <td>Boolean</td>
-    <td>if true enables custom mirror configuration</td>
-    <td><tt>true</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:mirror][:archive_url]</tt></td>
-    <td>String</td>
-    <td>sets archive mirror URL</td>
-    <td><tt>"http://mirror.unlp.edu.ar/ubuntu/"</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:mirror][:archive_url_src]</tt></td>
-    <td>String</td>
-    <td>sets archive sources mirror URL</td>
-    <td><tt>"http://ar.archive.ubuntu.com/ubuntu/"</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:mirror][:security_url]</tt></td>
-    <td>String</td>
-    <td>sets security mirror URL</td>
-    <td><tt>"http://mirror.unlp.edu.ar/ubuntu/"</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:mirror][:security_url_src]</tt></td>
-    <td>String</td>
-    <td>sets security sources mirror URL</td>
-    <td><tt>"http://security.ubuntu.com/ubuntu/"</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:cespi_server_base][:authorization][:sudo][:passwordless]</tt></td>
-    <td>Boolean</td>
-    <td>if true allows passwordless sudo to users in the sysadmin group</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+To clarify, some attributes are commented here (for a full list take a look at the attributes folder).
+
+Key | Type | Description | Default
+----------------------------------
+[:cespi_server_base][:timezone] | String | Set timezone to use on the server | "America/Argentina/Buenos_Aires"
+[:cespi_server_base][:ntp][:apparmor_enabled] | Boolean | If true configures some necessary stuff to work with apparmor | True
+[:cespi_server_base][:authorization][:sudo][:passwordless] | Boolean | If true allows passwordless sudo to users in the sysadmin group | True
 
 ## Usage
 
@@ -98,7 +59,6 @@ This cookbook can be called using individual recipes or using the default one an
 
 Planned but still not implemented.
 
-* Get SSH keys from a databag.
 * Backup client.
 * Log client.
 * Monitoring client.
