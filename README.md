@@ -48,7 +48,7 @@ To clarify, some attributes are commented here (for a full list take a look at t
 Key | Type | Description | Default
 ----|------|-------------|---------
 [:cespi_server_base][:timezone] | String | Set timezone to use on the server | "America/Argentina/Buenos_Aires"
-[:cespi_server_base][:ntp][:apparmor_enabled] | Boolean | If true configures some necessary stuff to work with apparmor | True
+[:cespi_server_base][:ntp][:apparmor_enabled] | Boolean | If true configures some necessary stuff to work with apparmor | False
 [:cespi_server_base][:authorization][:sudo][:passwordless] | Boolean | If true allows passwordless sudo to users in the sysadmin group | True
 
 ## Usage
