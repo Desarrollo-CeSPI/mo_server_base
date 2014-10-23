@@ -1,12 +1,11 @@
 # Cookbook: cespi_server_base
 
-Configures some basic stuff we usually need on a server. So far, what is
-implemented is:
+Configures some basic stuff we usually need on a server. So far, what is implemented is:
 
 * Configures custom Debian/Ubuntu mirrors.
 * Creates some initial groups.
 * Creates users based on information taken from a databag.
-* Installs some basic software and tools.
+* Installs some basic software packages.
 * NTP client.
 * Sets up sudoers.
 
@@ -93,26 +92,16 @@ Tested on Ubuntu 14.04, should work on Ubuntu 12.04 and Debian.
 
 ## Usage
 
-This cookbook can be called using individual recipes or using the default one
-and telling the cookbook which recipes to run by setting true in the appropiate
-enabled attributes. 
+This cookbook can be called using individual recipes or using the default one and telling the cookbook which recipes to run by setting true the appropiate enabled attributes. 
 
 ## ToDo
 
 Planned but still not implemented.
 
+* Get SSH keys from a databag.
 * Backup client.
 * Log client.
 * Monitoring client.
-
-## Contributing
-
-1. Fork the repository.
-2. Create a named feature branch (i.e. `add-new-recipe`).
-3. Write your change.
-4. Write tests for your change (if applicable).
-5. Run the tests, ensuring they all pass.
-6. Submit a Pull Request.
 
 ## License and Authors
 
