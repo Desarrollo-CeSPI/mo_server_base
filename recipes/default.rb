@@ -1,3 +1,4 @@
+include_recipe "proxmox-ohai"
 include_recipe "cespi_server_base::mirror" if node.cespi_server_base.mirror.enabled
 
 include_recipe "apt::default"
