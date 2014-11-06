@@ -1,5 +1,6 @@
+include_recipe "chef-sugar::default"
 include_recipe "proxmox-ohai"
-include_recipe "cespi_server_base::mirror" if node.cespi_server_base.mirror.enabled
+include_recipe "cespi_server_base::mirror" if ubuntu? && node.cespi_server_base.mirror.enabled
 
 include_recipe "apt::default"
 
