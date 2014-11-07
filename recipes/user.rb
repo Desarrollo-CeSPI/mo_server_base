@@ -11,4 +11,5 @@ users_manage "devops" do
 end
 
 node.override['authorization']['sudo']['passwordless'] = node[:cespi_server_base][:authorization][:sudo][:passwordless]
+node.override['authorization']['sudo']['include_sudoers_d'] = node[:cespi_server_base][:authorization][:sudo][:include_sudoers_d]
 include_recipe "sudo"

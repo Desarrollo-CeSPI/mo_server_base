@@ -21,6 +21,7 @@ default[:cespi_server_base][:authorization][:superadmin_group] = "sysadmin"
 
 # Sudoers configuration.
 default[:cespi_server_base][:authorization][:sudo][:passwordless] = true
+default[:cespi_server_base][:authorization][:sudo][:include_sudoers_d] = true
 
 # Rsyslog configuration.
 default[:cespi_server_base][:rsyslog][:enabled] = true
