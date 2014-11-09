@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = "cespi-server-base-berkshelf"
+  config.vm.hostname = "mo-server-base-berkshelf"
 
   # Set the version of chef to install using the vagrant-omnibus plugin
   config.omnibus.chef_version = :latest
@@ -93,8 +93,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
-        "recipe[cespi_server_base::default]"
-#        "recipe[cespi_server_security::default]"
+        "recipe[mo_server_base::default]"
+#        "recipe[mo_server_security::default]"
     ]
   end
 end

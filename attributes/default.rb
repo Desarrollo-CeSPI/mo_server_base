@@ -1,28 +1,28 @@
 # General parameters
-default[:cespi_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils)
+default[:mo_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils)
 
 # Timezone configuration.
-default[:cespi_server_base][:timezone] = "America/Argentina/Buenos_Aires"
+default[:mo_server_base][:timezone] = "America/Argentina/Buenos_Aires"
 
 # NTP specific
-default[:cespi_server_base][:ntp][:enabled] = true
-default[:cespi_server_base][:ntp][:servers] = %w(ntp.desarrollo.unlp.edu.ar)
-default[:cespi_server_base][:ntp][:apparmor_enabled] = false
+default[:mo_server_base][:ntp][:enabled] = true
+default[:mo_server_base][:ntp][:servers] = %w(ntp.desarrollo.unlp.edu.ar)
+default[:mo_server_base][:ntp][:apparmor_enabled] = false
 
 # Ubuntu mirror configuration.
-default[:cespi_server_base][:mirror][:enabled] = true
-default[:cespi_server_base][:mirror][:archive_url] = "http://mirror.unlp.edu.ar/ubuntu/"
-default[:cespi_server_base][:mirror][:archive_url_src] = "http://ar.archive.ubuntu.com/ubuntu/"
-default[:cespi_server_base][:mirror][:security_url] = "http://mirror.unlp.edu.ar/ubuntu/"
-default[:cespi_server_base][:mirror][:security_url_src] = "http://security.ubuntu.com/ubuntu/"
+default[:mo_server_base][:mirror][:enabled] = true
+default[:mo_server_base][:mirror][:archive_url] = "http://mirror.unlp.edu.ar/ubuntu/"
+default[:mo_server_base][:mirror][:archive_url_src] = "http://ar.archive.ubuntu.com/ubuntu/"
+default[:mo_server_base][:mirror][:security_url] = "http://mirror.unlp.edu.ar/ubuntu/"
+default[:mo_server_base][:mirror][:security_url_src] = "http://security.ubuntu.com/ubuntu/"
 
 # Users configuration.
-default[:cespi_server_base][:authorization][:superadmin_group] = "sysadmin"
+default[:mo_server_base][:authorization][:superadmin_group] = "sysadmin"
 
 # Sudoers configuration.
-default[:cespi_server_base][:authorization][:sudo][:passwordless] = true
-default[:cespi_server_base][:authorization][:sudo][:include_sudoers_d] = true
+default[:mo_server_base][:authorization][:sudo][:passwordless] = true
+default[:mo_server_base][:authorization][:sudo][:include_sudoers_d] = true
 
 # Rsyslog configuration.
-default[:cespi_server_base][:rsyslog][:enabled] = true
-default[:cespi_server_base][:rsyslog][:repeated_msg_reduction] = "off"
+default[:mo_server_base][:rsyslog][:enabled] = true
+default[:mo_server_base][:rsyslog][:repeated_msg_reduction] = "off"

@@ -1,4 +1,4 @@
-# Cookbook: cespi_server_base
+# Cookbook: mo_server_base
 
 Configures some basic stuff we usually need on a server. So far, what is implemented is:
 
@@ -15,23 +15,23 @@ Tested on Ubuntu 14.04, should work on Ubuntu 12.04 and Debian.
 
 ## Recipes
 
-### cespi_server_base::default
+### mo_server_base::default
 
 This recipe invokes every other recipe enabled in the attributes.
 
-### cespi_server_base::mirror
+### mo_server_base::mirror
 
 Changes the default mirrors to the ones specified in the corresponding attributes. By default, it's set to use CeSPI mirrors.
 
-### cespi_server_base::ntp
+### mo_server_base::ntp
 
 Installs and configures NTP client as specified in the attributes.
 
-### cespi_server_base::rsyslog
+### mo_server_base::rsyslog
 
 This recipe is a wrapper for the Rsyslog recipe to just change the way logs are stored in syslog, saving them line by line instead of consolidating some logs on the same line. The reason is to enable the use of some applications like Fail2Ban.
 
-### cespi_server_base::user
+### mo_server_base::user
 
 * Creates two groups:
   * sysadmin group (specified in the attributes). Users added to this group will be sudoers.
@@ -47,9 +47,9 @@ To clarify, some attributes are commented here (for a full list take a look at t
 
 Key | Type | Description | Default
 ----|------|-------------|---------
-[:cespi_server_base][:timezone] | String | Set timezone to use on the server | "America/Argentina/Buenos_Aires"
-[:cespi_server_base][:ntp][:apparmor_enabled] | Boolean | If true configures some necessary stuff to work with apparmor | False
-[:cespi_server_base][:authorization][:sudo][:passwordless] | Boolean | If true allows passwordless sudo to users in the sysadmin group | True
+[:mo_server_base][:timezone] | String | Set timezone to use on the server | "America/Argentina/Buenos_Aires"
+[:mo_server_base][:ntp][:apparmor_enabled] | Boolean | If true configures some necessary stuff to work with apparmor | False
+[:mo_server_base][:authorization][:sudo][:passwordless] | Boolean | If true allows passwordless sudo to users in the sysadmin group | True
 
 ## Usage
 
@@ -65,5 +65,5 @@ Planned but still not implemented.
 
 ## License and Authors
 
-Author:: Christian Rodriguez (<car@cespi.unlp.edu.ar>)
-Author:: Leandro Di Tommaso (<lditommaso@cespi.unlp.edu.ar>)
+Author:: Christian Rodriguez (<chrodriguez@gmail.com>)
+Author:: Leandro Di Tommaso (<leandro.ditommaso@mikroways.net>)

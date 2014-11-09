@@ -1,9 +1,9 @@
-name             'cespi_server_base'
+name             'mo_server_base'
 maintainer       'Christian A. Rodriguez & Leandro Di Tommaso'
-maintainer_email 'car@cespi.unlp.edu.ar lditommaso@cespi.unlp.edu.ar'
+maintainer_email 'chrodriguez@gmail.com leandro.ditommaso@mikroways.net'
 license          'All rights reserved'
-description      'Installs/Configures cespi_server_base'
-long_description 'Installs/Configures cespi_server_base'
+description      'Installs/Configures mo_server_base'
+long_description 'Installs/Configures mo_server_base'
 version          '0.1.18'
 
 depends 'apt',          '~>2.6.0'
