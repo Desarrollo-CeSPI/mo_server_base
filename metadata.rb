@@ -1,7 +1,7 @@
 name             'mo_server_base'
 maintainer       'Christian A. Rodriguez & Leandro Di Tommaso'
 maintainer_email 'chrodriguez@gmail.com leandro.ditommaso@mikroways.net'
-license          'All rights reserved'
+license          'MIT'
 description      'Installs/Configures mo_server_base'
 long_description 'Installs/Configures mo_server_base'
 version          '0.1.18'
