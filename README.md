@@ -55,6 +55,21 @@ Key | Type | Description | Default
 
 This cookbook can be called using individual recipes or using the default one and telling the cookbook which recipes to run by setting true the appropiate enabled attributes. 
 
+# Important
+
+When fqdn is not set properly because of domai issues, you can set a node attribute / role attribute with:
+
+```
+{
+    "chef_type": "environment",
+    "default_attributes": {
+        "set_fqdn": "*.some-domain.com",
+    }
+}
+```
+
+For more information about this see: [hostname cookbook](https://supermarket.getchef.com/cookbooks/hostname)
+
 ## ToDo
 
 Planned but still not implemented.

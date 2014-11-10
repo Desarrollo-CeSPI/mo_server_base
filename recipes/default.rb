@@ -22,3 +22,4 @@ include_recipe "mo_server_base::user"
 # Executes every other recipe if enabled.
 include_recipe "mo_server_base::ntp" if node.mo_server_base.ntp.enabled
 include_recipe "mo_server_base::rsyslog" if node.mo_server_base.rsyslog.repeated_msg_reduction
+include_recipe "hostname::default"
