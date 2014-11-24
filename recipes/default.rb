@@ -1,5 +1,4 @@
 include_recipe "chef-sugar::default"
-include_recipe "proxmox-ohai"
 include_recipe "mo_server_base::mirror" if ubuntu? && node.mo_server_base.mirror.enabled
 
 include_recipe "apt::default"
