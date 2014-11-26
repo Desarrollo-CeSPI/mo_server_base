@@ -1,5 +1,5 @@
 # General parameters
-default[:mo_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils)
+default[:mo_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils unattended-upgrades)
 
 # Timezone configuration.
 default[:mo_server_base][:timezone] = "America/Argentina/Buenos_Aires"
