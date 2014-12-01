@@ -1,7 +1,9 @@
 include_recipe "chef-sugar::default"
 include_recipe "mo_server_base::mirror" if ubuntu? && node.mo_server_base.mirror.enabled
 
+
 include_recipe "apt::default"
+include_recipe "apt::unattended-upgrades"
 
 # Install base packages.
 node[:mo_server_base][:packages].each do |p|
