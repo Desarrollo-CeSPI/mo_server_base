@@ -24,3 +24,4 @@ include_recipe "mo_server_base::user"
 include_recipe "mo_server_base::ntp" if node.mo_server_base.ntp.enabled
 include_recipe "mo_server_base::rsyslog" if node.mo_server_base.rsyslog.repeated_msg_reduction
 include_recipe "hostname::default"
+include_recipe "resolver::default"
