@@ -11,10 +11,8 @@ node[:mo_server_base][:packages].each do |p|
 end
 
 # Configures localtime.
-# Refactor this to support different OS and to execute only when necessary.
-execute 'timezone' do
-  command "ln -f -s /usr/share/zoneinfo/#{node[:mo_server_base][:timezone]} /etc/localtime"
-#  not_if
+link "/etc/localtime" do
+  to "/usr/share/zoneinfo/#{node[:mo_server_base][:timezone]}"
 end
 
 # Create users.
