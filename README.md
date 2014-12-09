@@ -41,6 +41,9 @@ This recipe is a wrapper for the Rsyslog recipe to just change the way logs are 
   * Copies SSH public key.
   * Adds users to the specified groups.
 
+This recipe uses users cookbook from supermarket, which needs search support. For that reason,
+chef-solo-search is included in the Berksfile, in order to be able to test the cookbook using Chef Solo.
+
 ## Attributes
 
 To clarify, some attributes are commented here (for a full list take a look at the attributes folder).
@@ -59,6 +62,11 @@ This cookbook can be called using individual recipes or using the default one an
 access just to the users included in the databag and remove any privilege from the rest of the users.
 If you don't include a user for yourself (with your public key) or have root password set **you will lost
 privilged access to the server**.
+
+### Adding a new user
+
+To add a new user with sudo privileges, you need to create a new data bag item in the users databag. Take a look at user.json in
+sample/data_bags/users/user.json for an example.
 
 # Important
 
