@@ -68,9 +68,9 @@ privilged access to the server**.
 To add a new user with sudo privileges, you need to create a new data bag item in the users databag. Take a look at user.json in
 sample/data_bags/users/user.json for an example.
 
-# Important
+## Important
 
-When fqdn is not set properly because of domai issues, you can set a node attribute / role attribute with:
+When fqdn is not set properly because of domain issues, you can set a node attribute / role attribute with:
 
 ```
 {
@@ -93,5 +93,5 @@ Planned but still not implemented.
 
 ## License and Authors
 
-Author:: Christian Rodriguez (<chrodriguez@gmail.com>)
-Author:: Leandro Di Tommaso (<leandro.ditommaso@mikroways.net>)
+* Author:: Christian Rodriguez (<chrodriguez@gmail.com>)
+* Author:: Leandro Di Tommaso (<leandro.ditommaso@mikroways.net>)
