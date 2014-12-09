@@ -53,7 +53,12 @@ Key | Type | Description | Default
 
 ## Usage
 
-This cookbook can be called using individual recipes or using the default one and telling the cookbook which recipes to run by setting true the appropiate enabled attributes. 
+This cookbook can be called using individual recipes or using the default one and telling the cookbook which recipes to run by setting true the appropiate enabled attributes.
+
+**Be careful** when using this cookbook with the default attributes, as it will give sudo
+access just to the users included in the databag and remove any privilege from the rest of the users.
+If you don't include a user for yourself (with your public key) or have root password set **you will lost
+privilged access to the server**.
 
 # Important
 
