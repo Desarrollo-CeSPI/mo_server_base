@@ -4,7 +4,6 @@
     "ssh-rsa fewb9fgwekjfnqekiufkghqbekj,nviquwkbcfkhqwj,nfcbjkhaw,ekbknsJfghjewa,bhsfneuasihbduyewbfhjszdjnbjhsdmzbdsakjhfbmnsadkjnfbjahsmbnfoahkgjds,nfkajdsbmvckj<dgbfvdns user@host"
   ],
   "groups": [ "sysadmin", "devops" ],
-  "uid": 2201,
   "shell": "\/bin\/bash",
   "comment": "User",
   "mail": "user@domain"
