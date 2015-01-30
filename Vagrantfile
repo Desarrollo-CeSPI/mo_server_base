@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.hostname = "mo-server-base-berkshelf"
 
-  config.omnibus.chef_version = :latest
+  config.omnibus.chef_version = "11.16.4"
 
   config.vm.box = "chef/ubuntu-14.04"
 
