@@ -4,7 +4,7 @@ maintainer_email 'chrodriguez@gmail.com leandro.ditommaso@mikroways.net'
 license          'MIT'
 description      'Installs/Configures mo_server_base'
 long_description 'Installs/Configures mo_server_base'
-version          '0.1.25'
+version          '0.1.26'
 
 depends 'apt',          '~>2.6.0'
 depends 'ntp',          '~>1.6.4'
