@@ -1,7 +1,6 @@
 include_recipe "chef-sugar::default"
 include_recipe "mo_server_base::mirror" if ubuntu? && node.mo_server_base.mirror.enabled
 
-
 include_recipe "apt::default"
 include_recipe "apt::unattended-upgrades"
 
@@ -23,3 +22,5 @@ include_recipe "mo_server_base::ntp" if node.mo_server_base.ntp.enabled
 include_recipe "mo_server_base::rsyslog" if node.mo_server_base.rsyslog.repeated_msg_reduction
 include_recipe "hostname::default"
 include_recipe "resolver::default"
+
+include_recipe "mo_server_base::postfix" if node.mo_server_base.postfix.enabled

@@ -29,3 +29,12 @@ default[:mo_server_base][:rsyslog][:repeated_msg_reduction] = "off"
 
 default['apt']['unattended_upgrades']['enabled'] = true
 
+# Postfix configuration.
+default[:mo_server_base][:postfix][:enabled] = false
+default['postfix']['mail_type'] = "client"
+default['postfix']['main']['mydomain'] = "example.com"
+default['postfix']['main']['myorigin'] =
+default['postfix']['main']['relayhost'] = "smtp.example.com"
+default['postfix']['main']['smtp_sasl_auth_enable'] = "no"
+default['postfix']['sasl']['smtp_sasl_user_name'] = "username"
+default['postfix']['sasl']['smtp_sasl_passwd'] = "password"
