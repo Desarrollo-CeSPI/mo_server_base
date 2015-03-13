@@ -44,7 +44,7 @@ default['postfix']['sasl']['smtp_sasl_passwd'] = "password"
 default['apt']['unattended_upgrades']['enabled'] = true
 default['apt']['unattended_upgrades']['update_package_lists'] = true
 default['apt']['unattended_upgrades']['allowed_origins'] = [
-  '"${distro_id}:${distro_codename}-security";'
+  "${distro_id} ${distro_codename}-security"
 ]
 default['apt']['unattended_upgrades']['package_blacklist'] = %w(libc-bin libc6 libc6-dev libc6-i686 libc-dev-bin libc6-i386 imagemagick libmagickcore-dev nodejs npm libffi-dev libreadline6-dev zlib1g-dev libssl-dev bison libxml2-dev libxslt-dev libmysqlclient-dev mysql-client libmagickwand-dev)
 default['apt']['unattended_upgrades']['mail'] = "root@localhost"
