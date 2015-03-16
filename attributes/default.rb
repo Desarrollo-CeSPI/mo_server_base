@@ -28,7 +28,7 @@ default[:mo_server_base][:rsyslog][:enabled] = true
 default[:mo_server_base][:rsyslog][:repeated_msg_reduction] = "off"
 
 # Postfix configuration.
-default[:mo_server_base][:postfix][:enabled] = true
+default[:mo_server_base][:postfix][:enabled] = false
 default[:mo_server_base][:mail][:databag] = "mailers"
 default[:mo_server_base][:mail][:mail_id] = "mail_desarrollo"
 default['postfix']['mail_type'] = "client"
