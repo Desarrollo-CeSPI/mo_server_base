@@ -4,6 +4,19 @@ include_recipe "mo_server_base::mirror" if ubuntu? && node.mo_server_base.mirror
 include_recipe "apt::default"
 include_recipe "apt::unattended-upgrades"
 
+execute "apt-upgrade" do
+  command "apt-get -y upgrade -o Dpkg::Options::='--force-confdef'"
+  action :nothing
+end
+
+file '/root/.apt-upgrade-once' do
+  owner 'root'
+  group 'root'
+  mode '0644'
+  action :create
+  notifies :run, 'execute[apt-upgrade]', :immediately
+end
+
 # Install base packages.
 node[:mo_server_base][:packages].each do |p|
   package p
