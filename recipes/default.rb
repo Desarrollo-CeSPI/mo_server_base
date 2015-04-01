@@ -5,7 +5,15 @@ include_recipe "apt::default"
 include_recipe "apt::unattended-upgrades"
 
 execute "apt-upgrade" do
-  command "apt-get -y upgrade -o Dpkg::Options::='--force-confdef'"
+  command <<-CMD
+    unset UCF_FORCE_CONFFOLD
+    export UCF_FORCE_CONFFNEW=YES
+    ucf --purge /boot/grub/menu.lst
+
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get -o Dpkg::Options::="--force-confdef" --force-yes -fuy upgrade
+  CMD
   action :nothing
 end
 
