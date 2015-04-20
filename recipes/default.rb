@@ -45,3 +45,4 @@ include_recipe "hostname::default"
 include_recipe "resolver::default"
 
 include_recipe "mo_server_base::postfix" if node.mo_server_base.postfix.enabled
+include_recipe "mo_server_base::nrpe" if node.mo_server_base.nrpe.enabled
