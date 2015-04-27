@@ -44,6 +44,7 @@ include_recipe "mo_server_base::rsyslog" if node.mo_server_base.rsyslog.repeated
 include_recipe "hostname::default"
 include_recipe "resolver::default" if node.mo_server_base.resolver.enabled
 include_recipe "logwatch::default"
+include_recipe "locales::default"
 include_recipe "locale::default"
 
 include_recipe "mo_server_base::postfix" if node.mo_server_base.postfix.enabled
