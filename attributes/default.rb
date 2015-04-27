@@ -50,3 +50,7 @@ default['apt']['unattended_upgrades']['package_blacklist'] = %w(libc-bin libc6 l
 default['apt']['unattended_upgrades']['mail'] = "root@localhost"
 default['apt']['unattended_upgrades']['mail_only_on_error'] = false
 default['apt']['unattended_upgrades']['remove_unused_dependencies'] = true
+
+# Disable setting up dns from attributes
+
+default[:mo_server_base][:resolver][:enabled] = false

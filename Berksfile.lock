@@ -2,6 +2,9 @@ DEPENDENCIES
   chef-solo-search
     git: https://github.com/edelight/chef-solo-search.git
     revision: 72bd5e3507056e5c931ee0cf7516ce1bfbce6d51
+  logwatch
+    git: git@github.com:opscode-cookbooks/logwatch.git
+    revision: c02d0335237b294b9a40ad407a6835ef3ffd5502
   mo_server_base
     path: .
     metadata: true
@@ -17,10 +20,13 @@ GRAPH
   hostname (0.3.0)
     hostsfile (>= 0.0.0)
   hostsfile (2.4.5)
-  mo_server_base (1.1.0)
+  logwatch (1.1.1)
+    perl (~> 1.2)
+  mo_server_base (1.0.1)
     apt (~> 2.7.0)
     chef-sugar (~> 2.5.0)
     hostname (~> 0.3.0)
+    logwatch (~> 1.1.1)
     nrpe (~> 1.5.0)
     ntp (~> 1.6.4)
     postfix (~> 3.6.2)
@@ -33,6 +39,7 @@ GRAPH
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
   ntp (1.6.8)
+  perl (1.2.4)
   postfix (3.6.2)
   resolver (1.2.0)
   rsyslog (1.15.0)
