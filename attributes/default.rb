@@ -27,9 +27,6 @@ default[:mo_server_base][:authorization][:sudo][:include_sudoers_d] = true
 default[:mo_server_base][:rsyslog][:enabled] = true
 default[:mo_server_base][:rsyslog][:repeated_msg_reduction] = "off"
 
-# Enable/Disable Nagios NRPE client.
-default[:mo_server_base][:nrpe][:enabled] = true
-
 # Postfix configuration.
 default[:mo_server_base][:postfix][:enabled] = false
 default[:mo_server_base][:mail][:databag] = "mailers"
