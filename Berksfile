@@ -6,6 +6,5 @@ cookbook 'chef-solo-search', '~> 0.5.2', git: 'https://github.com/edelight/chef-
 
 cookbook 'ubuntu', git: 'git@github.com:brodock/chef-ubuntu.git'
 
-cookbook 'logwatch', git: 'git@github.com:opscode-cookbooks/logwatch.git'
 
 metadata
