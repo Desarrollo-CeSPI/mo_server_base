@@ -48,3 +48,5 @@ include_recipe "locales::default"
 include_recipe "locale::default"
 
 include_recipe "mo_server_base::postfix" if node.mo_server_base.postfix.enabled
+
+include_recipe "mo_monitoring_client" if node.mo_server_base.monitoring.enabled
