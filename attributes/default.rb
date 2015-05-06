@@ -27,6 +27,9 @@ default[:mo_server_base][:authorization][:sudo][:include_sudoers_d] = true
 default[:mo_server_base][:rsyslog][:enabled] = true
 default[:mo_server_base][:rsyslog][:repeated_msg_reduction] = "off"
 
+# Logwatch format.
+default['logwatch']['format'] = 'html'
+
 # Postfix configuration.
 default[:mo_server_base][:postfix][:enabled] = false
 default[:mo_server_base][:mail][:databag] = "mailers"
