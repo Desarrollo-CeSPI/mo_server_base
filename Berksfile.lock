@@ -27,7 +27,7 @@ GRAPH
     perl (~> 1.2)
   mo_monitoring_client (1.0.1)
     nrpe (~> 1.5.0)
-  mo_server_base (1.1.0)
+  mo_server_base (1.1.2)
     apt (~> 2.7.0)
     chef-sugar (~> 2.5.0)
     hostname (~> 0.3.0)
