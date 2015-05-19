@@ -18,6 +18,8 @@ default[:mo_server_base][:mirror][:security_url_src] = "http://security.ubuntu.c
 
 # Users configuration.
 default[:mo_server_base][:authorization][:superadmin_group] = "sysadmin"
+# This group should be used to add additional users to sudoers.
+default[:mo_server_base][:authorization][:additional_superadmin_group] = nil
 
 # Sudoers configuration.
 default[:mo_server_base][:authorization][:sudo][:passwordless] = true
