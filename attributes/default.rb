@@ -1,5 +1,5 @@
 # General parameters
-default[:mo_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils htop tmux)
+default[:mo_server_base][:packages] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop)
 
 # Timezone configuration.
 default[:mo_server_base][:timezone] = "America/Argentina/Buenos_Aires"
