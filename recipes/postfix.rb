@@ -10,4 +10,4 @@ node.override['postfix']['sasl']['smtp_sasl_passwd'] = data["password"]
 node.override['postfix']['aliases'] = data["aliases"] if data["aliases"]
 
 include_recipe 'postfix::default'
-include_recipe 'postfix::aliases' if data["aliases"]
+include_recipe 'postfix::aliases' if data['aliases']

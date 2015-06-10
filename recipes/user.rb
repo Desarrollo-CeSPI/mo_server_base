@@ -1,6 +1,6 @@
-include_recipe "users"
+include_recipe 'users'
 
-admin_groups = Array(node[:mo_server_base][:authorization][:superadmin_group]) + Array(node[:mo_server_base][:authorization][:additional_superadmin_group])
+admin_groups = Array(node['mo_server_base']['authorization']['superadmin_group']) + Array(node['mo_server_base']['authorization']['additional_superadmin_group'])
 
 admin_groups.each do |group|
   users_manage group do
@@ -8,8 +8,8 @@ admin_groups.each do |group|
   end
 end
 
-node.set['authorization']['sudo']['passwordless'] = node[:mo_server_base][:authorization][:sudo][:passwordless]
-node.set['authorization']['sudo']['include_sudoers_d'] = node[:mo_server_base][:authorization][:sudo][:include_sudoers_d]
+node.set['authorization']['sudo']['passwordless'] = node['mo_server_base']['authorization']['sudo']['passwordless']
+node.set['authorization']['sudo']['include_sudoers_d'] = node['mo_server_base']['authorization']['sudo']['include_sudoers_d']
 node.set['authorization']['sudo']['groups'] = admin_groups
 
-include_recipe "sudo"
+include_recipe 'sudo'
