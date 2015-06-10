@@ -23,7 +23,7 @@ file '/root/.apt-upgrade-once' do
   mode '0644'
   action :create
   notifies :run, 'execute[apt-upgrade]', :immediately
-  only_if node['mo_server_base']['apt']['first_upgrade']
+  only_if { node['mo_server_base']['apt']['first_upgrade'] }
 end
 
 # Install base packages.
