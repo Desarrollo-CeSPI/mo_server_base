@@ -1,5 +1,5 @@
 # General parameters
-default['mo_server_base']['packages'] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop telnet tcpdump strace)
+default['mo_server_base']['packages'] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop telnet tcpdump strace sysstat)
 
 # Timezone configuration.
 default['mo_server_base']['timezone'] = 'America/Argentina/Buenos_Aires'
@@ -37,7 +37,7 @@ default['mo_server_base']['logwatch']['enabled'] = true
 default['logwatch']['format'] = 'html'
 
 # Postfix configuration.
-default['mo_server_base'][:postfix]['enabled'] = false
+default['mo_server_base']['postfix']['enabled'] = false
 default['mo_server_base']['mail']['databag'] = 'mailers'
 default['mo_server_base']['mail']['mail_id'] = 'mail_desarrollo'
 default['postfix']['mail_type'] = 'client'
