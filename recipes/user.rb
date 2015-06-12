@@ -1,15 +1,15 @@
-include_recipe "users"
+include_recipe 'users'
 
-users_manage node[:mo_server_base][:authorization][:superadmin_group] do
-#  group_id 1200
-  action :create
+admin_groups = Array(node['mo_server_base']['authorization']['superadmin_group']) + Array(node['mo_server_base']['authorization']['additional_superadmin_group'])
+
+admin_groups.each do |group|
+  users_manage group do
+    action :create
+  end
 end
 
-users_manage "devops" do
-#  group_id 1201
-  action :create
-end
+node.set['authorization']['sudo']['passwordless'] = node['mo_server_base']['authorization']['sudo']['passwordless']
+node.set['authorization']['sudo']['include_sudoers_d'] = node['mo_server_base']['authorization']['sudo']['include_sudoers_d']
+node.set['authorization']['sudo']['groups'] = admin_groups
 
-node.override['authorization']['sudo']['passwordless'] = node[:mo_server_base][:authorization][:sudo][:passwordless]
-node.override['authorization']['sudo']['include_sudoers_d'] = node[:mo_server_base][:authorization][:sudo][:include_sudoers_d]
-include_recipe "sudo"
+include_recipe 'sudo'
