@@ -66,3 +66,5 @@ default['mo_server_base']['monitoring']['enabled'] = true
 
 # Disable setting up dns from attributes
 default['mo_server_base']['resolver']['enabled'] = false
+
+default['mo_server_base']['hostname']['enabled'] = true
