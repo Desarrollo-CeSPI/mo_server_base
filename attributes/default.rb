@@ -51,12 +51,12 @@ default['postfix']['main']['smtpd_use_tls'] = false
 
 
 # Unattended upgrades.
-default['apt']['unattended_upgrades']['enabled'] = true
+default['apt']['unattended_upgrades']['enable'] = true
 default['apt']['unattended_upgrades']['update_package_lists'] = true
 default['apt']['unattended_upgrades']['allowed_origins'] = [
   '${distro_id} ${distro_codename}-security'
 ]
-default['apt']['unattended_upgrades']['package_blacklist'] = %w(libc-bin libc6 libc6-dev libc6-i686 libc-dev-bin libc6-i386 imagemagick libmagickcore-dev nodejs npm libffi-dev libreadline6-dev zlib1g-dev libssl-dev bison libxml2-dev libxslt-dev libmysqlclient-dev mysql-client libmagickwand-dev telnet)
+default['apt']['unattended_upgrades']['package_blacklist'] = %w()
 default['apt']['unattended_upgrades']['mail'] = 'root@localhost'
 default['apt']['unattended_upgrades']['mail_only_on_error'] = false
 default['apt']['unattended_upgrades']['remove_unused_dependencies'] = true
