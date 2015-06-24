@@ -31,6 +31,7 @@ default['mo_server_base']['authorization']['sudo']['include_sudoers_d'] = true
 # Rsyslog configuration.
 default['mo_server_base']['rsyslog']['enabled'] = true
 default['mo_server_base']['rsyslog']['repeated_msg_reduction'] = 'off'
+default['mo_server_base']['rsyslog']['client'] = false
 
 # Logwatch settings.
 default['mo_server_base']['logwatch']['enabled'] = true
