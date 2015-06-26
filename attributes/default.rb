@@ -1,5 +1,5 @@
 # General parameters
-default['mo_server_base']['packages'] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop telnet tcpdump strace sysstat)
+default['mo_server_base']['packages'] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop telnet tcpdump strace sysstat ngrep)
 
 # Timezone configuration.
 default['mo_server_base']['timezone'] = 'America/Argentina/Buenos_Aires'
