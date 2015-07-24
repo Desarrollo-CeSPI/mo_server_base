@@ -1,5 +1,5 @@
 # General parameters
-default['mo_server_base']['packages'] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop telnet tcpdump strace sysstat)
+default['mo_server_base']['packages'] = %w(atsar vim locate apt-utils bsdutils htop tmux rsync iotop telnet tcpdump strace sysstat ngrep)
 
 # Timezone configuration.
 default['mo_server_base']['timezone'] = 'America/Argentina/Buenos_Aires'
@@ -31,6 +31,8 @@ default['mo_server_base']['authorization']['sudo']['include_sudoers_d'] = true
 # Rsyslog configuration.
 default['mo_server_base']['rsyslog']['enabled'] = true
 default['mo_server_base']['rsyslog']['repeated_msg_reduction'] = 'off'
+default['mo_server_base']['rsyslog']['preserve_fqdn'] = 'on'
+default['mo_server_base']['rsyslog']['client'] = false
 
 # Logwatch settings.
 default['mo_server_base']['logwatch']['enabled'] = true
