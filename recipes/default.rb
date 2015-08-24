@@ -41,7 +41,7 @@ include_recipe 'mo_server_base::user'
 
 # Executes every other recipe if enabled.
 include_recipe 'mo_server_base::ntp'     if node['mo_server_base']['ntp']['enabled']
-include_recipe 'mo_server_base::rsyslog' if node['mo_server_base']['rsyslog']['repeated_msg_reduction']
+include_recipe 'mo_server_base::rsyslog' if node['mo_server_base']['rsyslog']['enabled']
 include_recipe 'hostname::default'       if node['mo_server_base']['hostname']['enabled']
 include_recipe 'resolver::default'       if node['mo_server_base']['resolver']['enabled']
 include_recipe 'logwatch::default'       if node['mo_server_base']['logwatch']['enabled']
