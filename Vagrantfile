@@ -16,7 +16,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.omnibus.chef_version = "11.16.4"
 
-  config.vm.box = "chef/ubuntu-14.04"
+  #config.vm.box = "chef/ubuntu-14.04"
+  config.vm.box = "chef/debian-7.7"
 
   config.vm.network :private_network, type: "dhcp"
 
