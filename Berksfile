@@ -5,6 +5,6 @@ cookbook 'chef-solo-search',    '~> 0.5.2', git: 'https://github.com/edelight/ch
 
 cookbook 'ubuntu',                          git: 'git@github.com:brodock/chef-ubuntu.git'
 cookbook 'mo_monitoring_client',            git: 'git@github.com:Desarrollo-CeSPI/mo_monitoring_client.git', branch: 'version1.0.x'
-
+cookbook 'postfix',                         git: 'git@github.com:leoditommaso/postfix.git', branch: 'master'
 
 metadata
