@@ -5,7 +5,7 @@ if node['virtualization']['system'] == 'openvz'
   node.override['rsyslog']['modules'] = Array(node['rsyslog']['modules']) - ['imklog']
 end
 
-if debian? 
+if debian_wheezy? 
   apt_repository 'rsyslog_debian' do
     uri "http://debian.adiscon.com/v8-stable"
     distribution "#{node['lsb']['codename']}/"
